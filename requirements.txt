@@ -17,3 +17,4 @@ scipy==1.4.1              # via seaborn
 seaborn==0.10.1
 six==1.15.0               # via cycler, python-dateutil
 pyscf==1.7.6
+h5py==2.10.0
