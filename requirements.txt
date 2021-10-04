@@ -5,10 +5,7 @@
 #    pip-compile
 #
 
-cycler==0.10.0            # via matplotlib
-kiwisolver==1.2.0         # via matplotlib
 matplotlib==3.2.1
 numpy==1.18.5
-six==1.15.0               # via cycler, python-dateutil
 pyscf==1.7.6
 h5py==2.10.0
