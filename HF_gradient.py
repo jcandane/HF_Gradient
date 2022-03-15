@@ -60,4 +60,11 @@ def get_f_ix(mol, DA, DB, FA, FB):
 
     return ff_ix
 
+def nuclei_force(Z, R_ix):
+    """GIVEN: atomic number, Z, & positions R_ix calculate force """
+    R_ijx = R_ix[None, :,:] - R_ix[:, None,:]
+    f_ij  = Z[:, None] * Z[None,:] /(np.linalg.norm(R_ijx, axis=2)**3 + np.eye(len(R_ix)) ) 
+    f_ij *= (1-np.eye(len(Z)))
+    return -np.einsum("ij, ijx -> ix", f_ij, R_ijx)
+
 
